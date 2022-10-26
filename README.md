@@ -39,3 +39,7 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 ### Experiments
 
 ### Results
+<p float="left">
+  <img src="/resources/graph_1.png" width="100" />
+  <img src="/resources/graph_2.png" width="100" /> 
+</p>
