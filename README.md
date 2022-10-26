@@ -42,7 +42,7 @@ We evaluate proposed CIMA method on multi-agent reinforcement learning task in S
 
 ### Results
 Mean reward in 2m_vs_2z scenario
-<p align="center">
+<p align="middle">
   <img src="/resources/graph_1.png" width=40% />
   <img src="/resources/graph_2.png" width=40% />
 </p>
