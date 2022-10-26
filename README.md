@@ -39,9 +39,14 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 ### Experiments
 
 ### Results
-<p float="left">
-  <img src="/resources/graph_1.png" width="250" />
-  <img src="/resources/graph_2.png" width="250" />
-  <img src="/resources/graph_3.png" width="250" />
-  <img src="/resources/graph_4.png" width="250" />
+Mean reward in 2m_vs_2z scenario
+<p align="center">
+  <img src="/resources/graph_1.png" width=100% />
+  <img src="/resources/graph_2.png" width=100% />
+</p>
+
+
+<p align="center">
+  <img src="/resources/graph_3.png" width=100% />
+  <img src="/resources/graph_4.png" width=100% />
 </p>
