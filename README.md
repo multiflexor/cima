@@ -41,12 +41,14 @@ We evaluate proposed CIMA method on multi-agent reinforcement learning task in S
 ### Multi-agent IM Environment
 
 ### Results
-Mean reward in 2m_vs_2z scenario
+#### Mean rewards in 2m_vs_2z scenario
 <p align="center">
   <img src="/resources/graph_1.png" width=40% />
   <img src="/resources/graph_2.png" width=40% />
 </p>
+<h5 align="center">Individual IM (left), Collective IM (right)</h5>
 
+#### Mean rewards in 2m_vs_10z scenario
 <p align="center">
   <img src="/resources/graph_3.png" width=40% />
   <img src="/resources/graph_4.png" width=40% />
