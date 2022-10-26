@@ -28,15 +28,29 @@ Link, description, citations will be added later.
 ### Abstract
 One of the great challenges in reinforcement learning is learning an optimal behavior in environments with sparse rewards. Solving tasks in such setting require effective exploration methods that are often based on intrinsic rewards. Plenty of real-world problems involve sparse rewards and many of them are further complicated by multi-agent setting, where the majority of intrinsic motivation methods are ineffective. In this paper we address the problem of multi-agent environments with sparse rewards and propose to combine intrinsic rewards and multi-agent reinforcement learning (MARL) technics to create the Collective Intrinsic Motivation of Agents (CIMA) method. CIMA uses both the external reward and the intrinsic collective reward from the cooperative multi-agent system. The proposed method can be used along with any MARL method as base reinforcement learning algorithm. We compare CIMA with several state-of-the-art MARL methods within multi-agent environment with sparse rewards designed in StarCraft II
 
-### Architecture
+### Methods
+
+### Architecture of CIMA
 <p align="center">
   <img src="/resources/arch.png" width=70% height=70%>
 </p>
 
+### Experiments
+We evaluate proposed CIMA method on multi-agent reinforcement learning task in StarCraft II using SMAC. It provides the possibility of decentralized management of multiple agents. Each allied unit is controlled by an independently learning agent that has access only to local observation of the environment. Agents have access to such observation information as health points, mutual position and unit types of the agent itself and other units in visibility range. In this sense the system is multi-agent and partially observable.
+
+\begin{table}[H]
+  \caption{Main experimental scenarios}
+  \label{tab:locations}
+  \begin{tabular}{ccc}\toprule
+    \textit{Number of  agents} & \textit{Number of enemies} & \textit{Type of IM} \\ \midrule
+    2 & 2 & Individual \\
+    2 & 2 & Collective \\
+    2 & 10 & Individual \\
+    2 & 10 & Collective \\ \bottomrule
+  \end{tabular}
+\end{table}
 
 ### Multi-agent IM Environment
-
-### Experiments
 
 ### Results
 Mean reward in 2m_vs_2z scenario
