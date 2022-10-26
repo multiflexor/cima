@@ -60,6 +60,6 @@ We evaluate proposed CIMA method on multi-agent reinforcement learning task in S
 <p align="center">
   <img src="/resources/maddpg_2v2.gif" width=20% />
   <img src="/resources/maddpg_2v10.gif" width=20% />
-  <img src="/resources/cima_2v2.gif.png" width=20% />
+  <img src="/resources/cima_2v2.gif" width=20% />
   <img src="/resources/cima_2v10.gif" width=20% />
 </p>
