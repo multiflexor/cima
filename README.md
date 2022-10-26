@@ -30,7 +30,7 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 
 ### Architecture
 <p align="center">
-  <img src="https://github.com/multiflexor/cima/blob/main/resources/arch.png" width=70% height=70%>
+  <img src="/resources/arch.png" width=70% height=70%>
 </p>
 
 
