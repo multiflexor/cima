@@ -32,7 +32,6 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 <p align="center">
   <img src="https://github.com/multiflexor/cima/blob/main/resources/arch.png" width=70% height=70%>
 </p>
-<h4 align="center">Architecture of the CIMA method</h4>
 
 
 
