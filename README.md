@@ -40,7 +40,22 @@ We evaluate proposed CIMA method on multi-agent reinforcement learning task in S
 
 ### Multi-agent IM Environment
 <p align="center">
-  <img src="/resources/env_overview.png" width=100% />
+  <img src="/resources/env_overview.png" width=80% />
+</p>
+
+#### Equal forces attack
+<p align="center">
+  <img src="/resources/2v2_attack.gif" width=80% />
+</p>
+
+#### Attack, but there is numerical superiority of the enemy
+<p align="center">
+  <img src="/resources/2v10_attack.gif" width=80% />
+</p>
+
+#### Hide when having disadvantage
+<p align="center">
+  <img src="/resources/2v10_hide.gif" width=80% />
 </p>
 
 ### Results
