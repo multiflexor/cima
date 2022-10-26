@@ -40,8 +40,8 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 
 ### Results
 <p float="left">
-  <img src="/resources/graph_1.png" width="200" />
-  <img src="/resources/graph_2.png" width="200" />
-  <img src="/resources/graph_3.png" width="200" />
-  <img src="/resources/graph_4.png" width="200" />
+  <img src="/resources/graph_1.png" width="250" />
+  <img src="/resources/graph_2.png" width="250" />
+  <img src="/resources/graph_3.png" width="250" />
+  <img src="/resources/graph_4.png" width="250" />
 </p>
