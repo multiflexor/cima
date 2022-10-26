@@ -46,10 +46,12 @@ We evaluate proposed CIMA method on multi-agent reinforcement learning task in S
   <img src="/resources/graph_1.png" width=40% />
   <img src="/resources/graph_2.png" width=40% />
 </p>
-<h5 align="center">Individual IM (left), Collective IM (right)</h5>
+<h4 align="center">Individual IM (left), Collective IM (right)</h4>
 
 #### Mean rewards in 2m_vs_10z scenario
 <p align="center">
   <img src="/resources/graph_3.png" width=40% />
   <img src="/resources/graph_4.png" width=40% />
 </p>
+<h4 align="center">Individual IM (left), Collective IM (right)</h4>
+
