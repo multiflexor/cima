@@ -38,18 +38,6 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 ### Experiments
 We evaluate proposed CIMA method on multi-agent reinforcement learning task in StarCraft II using SMAC. It provides the possibility of decentralized management of multiple agents. Each allied unit is controlled by an independently learning agent that has access only to local observation of the environment. Agents have access to such observation information as health points, mutual position and unit types of the agent itself and other units in visibility range. In this sense the system is multi-agent and partially observable.
 
-\begin{table}[H]
-  \caption{Main experimental scenarios}
-  \label{tab:locations}
-  \begin{tabular}{ccc}\toprule
-    \textit{Number of  agents} & \textit{Number of enemies} & \textit{Type of IM} \\ \midrule
-    2 & 2 & Individual \\
-    2 & 2 & Collective \\
-    2 & 10 & Individual \\
-    2 & 10 & Collective \\ \bottomrule
-  \end{tabular}
-\end{table}
-
 ### Multi-agent IM Environment
 
 ### Results
