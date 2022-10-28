@@ -29,6 +29,16 @@ Link, description, citations will be added later.
 One of the great challenges in reinforcement learning is learning an optimal behavior in environments with sparse rewards. Solving tasks in such setting require effective exploration methods that are often based on intrinsic rewards. Plenty of real-world problems involve sparse rewards and many of them are further complicated by multi-agent setting, where the majority of intrinsic motivation methods are ineffective. In this paper we address the problem of multi-agent environments with sparse rewards and propose to combine intrinsic rewards and multi-agent reinforcement learning (MARL) technics to create the Collective Intrinsic Motivation of Agents (CIMA) method. CIMA uses both the external reward and the intrinsic collective reward from the cooperative multi-agent system. The proposed method can be used along with any MARL method as base reinforcement learning algorithm. We compare CIMA with several state-of-the-art MARL methods within multi-agent environment with sparse rewards designed in StarCraft II
 
 ### Methods
+One way to apply intrinsic motivation in reinforcement learning is to gain knowledge about the environment an agent interacts with through exploration. We consider three main methods that use intrinsic motivation and help the agent gather information about the environment with sparse rewards: state novelty, discrepancy towards other states, prediction error.
+
+#### State Novelty
+Since the interaction environment considered within StarCraft II can be represented as a two-dimensional grid world, we divided the state space into equal cells and thus were able to count the state novelty as the frequency of the agent ending up in that state. At each time step $t$ we count the number of visits by the agent of certain areas of the grid-world $s_g$. To store this information we use a two-dimensional array $SN$. Intrinsic reward for agent $i$ is assigned as follows:
+
+where $SN_t^i(s_g)$ is the number of visits of agent $i$ to its current position in the grid-world $s_g$ (corresponding to some environment state $s$) at time step $t$, $\displaystyle\min_{s_g}(SN_t^i)$ and $\displaystyle\max_{s_g}(SN_t^i)$ are the minimum and maximum numbers of visits for agent $i$ among all states of the grid-world at each time step $t$. We consider two versions of the implementation of this multi-agent state novelty (MASN) method - individual (MASNi) and collective (MASNc). The difference is that in the first one, we count visits to each state individually for $n$ agents, i.e. $SN=\{SN^i, ..., SN^n\}$, and in the second one, all agents share the total number of visits and simultaneously update $SN$.
+
+#### Discrepancy Towards Other States
+
+#### Prediction Error
 
 ### Architecture of CIMA
 Centralized critics use the external reward $r^{ex}$ and the intrinsic reward $r^{in}$ for learning, while the decentralized actors by collective actions $a$ and collective observations $o$ affect the training of the intrinsic motivation module.
