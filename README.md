@@ -67,16 +67,22 @@ The rewards in this environment are sparse because the agents receive rewards fo
 </p>
 
 #### Equal forces attack
+**The Plan**: Just detroy the enemy!
+
 <p align="center">
   <img src="/resources/2v2_attack.gif" width=50% />
 </p>
 
 #### Attack, but there is numerical superiority of the enemy
+**The Plan** doest'n work anymore...
+
 <p align="center">
   <img src="/resources/2v10_attack.gif" width=50% />
 </p>
 
 #### Hide when having disadvantage
+**New Plan**: Get to the safe zone!
+
 <p align="center">
   <img src="/resources/2v10_hide.gif" width=50% />
 </p>
