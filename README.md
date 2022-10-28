@@ -3,7 +3,7 @@ Combining the principles of intrinsic motivation and multi-agent learning! :robo
 
 CIMA is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment. MADDPG implementation is inherited from [philtabor](https://github.com/philtabor/Multi-Agent-Deep-Deterministic-Policy-Gradients).
 
-## Install
+## Setup
 Clone repository:
 ```
 git clone https://github.com/bolshakoVofficial/cima.git
@@ -18,7 +18,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Run example
+## Run an experiment
 ```
 python cima/main.py --scenario MADDPG --map_name 2m_vs_2zg_IM --n_steps 2000000
 ```
