@@ -108,10 +108,10 @@ In scenarios where the number of allied and enemy agents were equal without a ne
 It is also important to analyze the states visited by agents in terms of the completeness of the exploration of the environment. To do this, we have built heatmaps, which show the positions of agents at different time steps. The trace of agents on heat maps gradually evaporates over time. It can be noticed that agents using the MADDPG method and a random noise for environment exploration only visit regions close to their starting position. Everything gets even worse in **2m_vs_10z** scenario because the prevailing number of opposing agents almost instantly destroys the allied agents. At the same time the agents using the CIMA learning method visit much broader regions of the map which allows them to find the safe zone and reach maximum reward parameters and number of victories.
 
 <p align="center">
-  <img src="/resources/maddpg_2v2.gif" width=20% title="1"/>
-  <img src="/resources/maddpg_2v10.gif" width=20% />
-  <img src="/resources/cima_2v2.gif" width=20% />
-  <img src="/resources/cima_2v10.gif" width=20% />
+  <img src="/resources/maddpg_2v2.gif" width=20% title="maddpg_2v2" />
+  <img src="/resources/maddpg_2v10.gif" width=20% title="maddpg_2v10" />
+  <img src="/resources/cima_2v2.gif" width=20% title="cima_2v2" />
+  <img src="/resources/cima_2v10.gif" width=20% title="cima_2v10" />
 </p>
 
 <h4 align="center">From left to right: maddpg_2v2, maddpg_2v10, cima_2v2, cima_2v10 </h4>
