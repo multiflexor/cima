@@ -113,3 +113,4 @@ It is also important to analyze the states visited by agents in terms of the com
   <img src="/resources/cima_2v2.gif" width=20% />
   <img src="/resources/cima_2v10.gif" width=20% />
 </p>
+<h4 align="center">From left to right: **maddpg_2v2**, **maddpg_2v10**, **cima_2v2**, **cima_2v10** </h4>
