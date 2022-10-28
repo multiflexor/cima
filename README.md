@@ -31,6 +31,8 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 ### Methods
 
 ### Architecture of CIMA
+<img src="https://latex.codecogs.com/gif.latex?\text{Centralized critics use the external reward} $r^{ex}$ \text{and the intrinsic reward} $r^{in}$ \text{for learning, while the decentralized actors by collective actions} $a$ \text{and collective observations} $o$ \text{affect training of the intrinsic motivation neural network module.}" /> 
+
 <p align="center">
   <img src="/resources/arch.png" width=70% height=70%>
 </p>
