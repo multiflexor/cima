@@ -58,6 +58,10 @@ Centralized critics use the external reward $r^{ex}$ and the intrinsic reward $r
 We evaluate proposed CIMA method on multi-agent reinforcement learning task in StarCraft II using SMAC. It provides the possibility of decentralized management of multiple agents. Each allied unit is controlled by an independently learning agent that has access only to local observation of the environment. Agents have access to such observation information as health points, mutual position and unit types of the agent itself and other units in visibility range. In this sense the system is multi-agent and partially observable.
 
 ### Multi-agent IM Environment
+An IM environment was created for experiments with the collective intrinsic motivation that included a special interaction element. When any agent (or several agents) approaches the gate for the first time, it will open to let him in, after which the gate will close and remain closed for the rest of the episode no matter what happens in the environment. Agents inside this zone are safe and enemies cannot attack them. This behavior greatly increases the chances of winning in episode, but requires consistent cooperative actions in the environment with sparse rewards.
+
+The rewards in this environment are sparse because the agents receive rewards for winning the episode (i.e. destroying enemy team) but the victory itself in some cases needs a long chain of cooperative actions (the more agents are in safe zone, the higher the chances of winning). Episode time steps are limited. The allied units were ranged marines and the enemy units were melee zerglings.
+
 <p align="center">
   <img src="/resources/env_overview.png" width=60% />
 </p>
