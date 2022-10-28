@@ -34,7 +34,9 @@ One way to apply intrinsic motivation in reinforcement learning is to gain knowl
 #### State Novelty
 Since the interaction environment considered within StarCraft II can be represented as a two-dimensional grid world, we divided the state space into equal cells and thus were able to count the state novelty as the frequency of the agent ending up in that state. At each time step $t$ we count the number of visits by the agent of certain areas of the grid-world $s_g$. To store this information we use a two-dimensional array $SN$. Intrinsic reward for agent $i$ is assigned as follows:
 
+<p align="center">
 $r_i^{in}(s_g) = (1 - \frac{SN_t^i(s_g) - \displaystyle\min_{s_g}(SN_t^i)}{\displaystyle\max_{s_g}(SN_t^i)})^2$,
+</p>
 
 where $SN_t^i(s_g)$ is the number of visits of agent $i$ to its current position in the grid-world $s_g$ (corresponding to some environment state $s$) at time step $t$, $\displaystyle\min_{s_g}(SN_t^i)$ and $\displaystyle\max_{s_g}(SN_t^i)$ are the minimum and maximum numbers of visits for agent $i$ among all states of the grid-world at each time step $t$. We consider two versions of the implementation of this multi-agent state novelty (MASN) method - individual (MASNi) and collective (MASNc). The difference is that in the first one, we count visits to each state individually for $n$ agents, i.e. $SN=\{SN^i, ..., SN^n\}$, and in the second one, all agents share the total number of visits and simultaneously update $SN$.
 
