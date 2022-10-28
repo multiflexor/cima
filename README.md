@@ -31,7 +31,7 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 ### Methods
 
 ### Architecture of CIMA
-Centralized critics use the external reward $r^{ex}$ and the intrinsic reward $r^{in}$ for learning, while the decentralized actors by collective actions $a$ and collective observations $o$ affect the training of the intrinsic motivation neural network module.
+Centralized critics use the external reward $r^{ex}$ and the intrinsic reward $r^{in}$ for learning, while the decentralized actors by collective actions $a$ and collective observations $o$ affect the training of the intrinsic motivation module.
 
 <p align="center">
   <img src="/resources/arch.png" width=70% height=70%>
