@@ -32,17 +32,20 @@ One of the great challenges in reinforcement learning is learning an optimal beh
 One way to apply intrinsic motivation in reinforcement learning is to gain knowledge about the environment an agent interacts with through exploration. We consider three sources of intrinsic motivation that can help the agent gather information about the environment with sparse rewards: state novelty, discrepancy towards other states, prediction error.
 
 #### State Novelty
-Since the interaction environment considered within StarCraft II can be represented as a two-dimensional grid world, we divided the state space into equal cells and thus were able to count the state novelty as the frequency of the agent ending up in that state. At each time step $t$ we count the number of visits by the agent of certain areas of the grid-world $s_g$. To store this information we use a two-dimensional array $SN$. Intrinsic reward for agent $i$ is assigned as follows:
+Since the interaction environment considered within StarCraft II can be represented as a two-dimensional grid world, we divided the state space into equal cells and thus were able to calculate the state novelty using the frequency of the agent ending up in that state. Lower intrinsic reward corresponds to more frequently visited states. 
 
-<p align="center">
-$r_i^{in}(s_g) = (1 - \frac{SN_t^i(s_g) - \displaystyle\min_{s_g}(SN_t^i)}{\displaystyle\max_{s_g}(SN_t^i)})^2$,
-</p>
-
-where $SN_t^i(s_g)$ is the number of visits of agent $i$ to its current position in the grid-world $s_g$ (corresponding to some environment state $s$) at time step $t$, $\displaystyle\min_{s_g}(SN_t^i)$ and $\displaystyle\max_{s_g}(SN_t^i)$ are the minimum and maximum numbers of visits for agent $i$ among all states of the grid-world at each time step $t$. We consider two versions of the implementation of this multi-agent state novelty (MASN) method - individual (MASNi) and collective (MASNc). The difference is that in the first one, we count visits to each state individually for $n$ agents, i.e. $SN=\{SN^i, ..., SN^n\}$, and in the second one, all agents share the total number of visits and simultaneously update $SN$.
+We consider two versions of the implementation of this multi-agent state novelty (MASN) method - individual (MASNi) and collective (MASNc). In the first one we count visits for every agent individually, and in the second one, all agents share the total number of visits.
 
 #### Discrepancy Towards Other States
+Intrinsic motivation based on discrepancy towards other states can be efficiently implemented using the Variational Autoencoder (VAE). When using VAE to project the state space into a probabilistic latent representation that reflects the internal structure of the environment, one can naturally obtain some measure of discrepancy. This measure is determined by how much the posterior distribution of the latent representation deviates from the prior assumption. Since it is difficult and impractical to determine the exact posterior distribution, it can be approximated by the variational distribution.
+
+The Multi-agent discrepancy towards other states (MADOS) method was also implemented in two versions. In the individual version MADOSi each agent has its own variational autoencoder which receives input observations and action only from this particular agent and the intrinsic rewards are individual. The collective version MADOSc has a single common and centralized variational autoencoder for all agents. In this case the input vector contains observations and recent actions of all agents and the intrinsic reward becomes collective.
+
 
 #### Prediction Error
+This group of intrinsic motivation methods use the next state prediction error as the intrinsic reward. For building such intrinsic motivation we choose an Autoencoder neural network, for which the input consists of agent observations and actions. 
+
+Two versions of Multi-agent prediction error (MAPE) method were tested for modeling individual and collective intrinsic rewards: individual autoencoder neural network for each agent (MAPEi) and one shared autoencoder for all agents (CIMA).
 
 ### Architecture of CIMA
 Centralized critics use the external reward $r^{ex}$ and the intrinsic reward $r^{in}$ for learning, while the decentralized actors by collective actions $a$ and collective observations $o$ affect the training of the intrinsic motivation module.
