@@ -119,3 +119,8 @@ It is also important to analyze the states visited by agents in terms of the com
 <p align="center">
   From left to right: <b>maddpg_2v2</b>, <b>maddpg_2v10</b>, <b>cima_2v2</b>, <b>cima_2v10</b>
 </p>
+
+
+## Licence
+
+The MIT License
