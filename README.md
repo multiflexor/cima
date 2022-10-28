@@ -88,6 +88,8 @@ The rewards in this environment are sparse because the agents receive rewards fo
 </p>
 
 ### Results
+In scenarios where the number of allied and enemy agents were equal without a need for intrinsic rewards, almost all methods show good results and achieve highest possible score. However, with an advantage in the number of agents in favor of the opponent, only the CIMA method can learn the optimal strategy (hiding to the safe zone).
+
 #### Mean rewards in 2m_vs_2z scenario
 <p align="center">
   <img src="/resources/graph_1.png" width=40% />
@@ -103,6 +105,8 @@ The rewards in this environment are sparse because the agents receive rewards fo
 <h4 align="center">Individual IM (left), Collective IM (right)</h4>
 
 #### Heatmaps
+It is also important to analyze the states visited by agents in terms of the completeness of the exploration of the environment. To do this, we have built heatmaps, which show the positions of agents at different time steps. The trace of agents on heat maps gradually evaporates over time. It can be noticed that agents using the MADDPG method and a random noise for environment exploration only visit regions close to their starting position. Everything gets even worse in $2m_vs_10z$ scenario because the prevailing number of opposing agents almost instantly destroys the allied agents. At the same time the agents using the CIMA learning method visit much broader regions of the map which allows them to find the safe zone and reach maximum reward parameters and number of victories.
+
 <p align="center">
   <img src="/resources/maddpg_2v2.gif" width=20% />
   <img src="/resources/maddpg_2v10.gif" width=20% />
