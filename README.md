@@ -66,14 +66,14 @@ The rewards in this environment are sparse because the agents receive rewards fo
   <img src="/resources/env_overview.png" width=60% />
 </p>
 
-#### Equal forces attack
+#### Equal forces
 **The Plan**: Just detroy the enemy!
 
 <p align="center">
   <img src="/resources/2v2_attack.gif" width=50% />
 </p>
 
-#### Attack, but there is numerical superiority of the enemy
+#### There is numerical superiority of the enemy
 **The Plan** doest'n work anymore...
 
 <p align="center">
