@@ -1,7 +1,7 @@
 # CIMA - Collective Intrinsic Motivation of Agents
 Combining the principles of intrinsic motivation and multi-agent learning! :robot::pray::robot:
 
-CIMA is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment. MADDPG implementation is inherited from [philtabor](https://github.com/philtabor/Multi-Agent-Deep-Deterministic-Policy-Gradients). [LIIR](https://github.com/yalidu/liir) was used for comparison.
+CIMA is written in PyTorch and uses [SMAC](https://github.com/oxwhirl/smac) as its environment. MADDPG implementation is inherited from [philtabor](https://github.com/philtabor/Multi-Agent-Deep-Deterministic-Policy-Gradients). For experiments we used [LIIR](https://github.com/yalidu/liir) original implementation.
 
 ## Setup
 Clone repository:
